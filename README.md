@@ -1,0 +1,1 @@
+# hyperupcall's default ESLint Configuration
