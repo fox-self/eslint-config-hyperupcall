@@ -1,8 +1,15 @@
 {
+	"type": "module",
 	"name": "eslint-config-hyperupcall",
 	"version": "0.1.0",
 	"main": "./src/index.js",
 	"peerDependencies": {
-		"eslint": ">= 8"
+		"eslint": ">=8.0.0"
+	},
+	"dependencies": {
+		"eslint-config-prettier": "^8.5.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.18.0"
 	}
 }
