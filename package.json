@@ -1,15 +1,20 @@
 {
-	"type": "module",
-	"name": "eslint-config-hyperupcall",
+	"name": "@hyperupcall/eslint-config",
 	"version": "0.2.0",
-	"main": "./src/index.js",
-	"peerDependencies": {
-		"eslint": ">=8.0.0"
+	"scripts": {
+		"lint": "eslint"
 	},
-	"dependencies": {
+	"exports": {
+		"import": "./.eslintrc.mjs",
+		"require": "./.eslintrc.cjs"
+	},
+	"peerDependencies": {
+		"eslint": ">=8.0.0",
 		"eslint-config-prettier": "^8.5.0"
 	},
 	"devDependencies": {
-		"eslint": "^8.18.0"
+		"@hyperupcall/prettier-config": "^0.5.0",
+		"eslint": "^8.18.0",
+		"eslint-config-prettier": "^8.5.0"
 	}
 }
