@@ -5,15 +5,15 @@
 		"lint": "eslint"
 	},
 	"exports": {
-		"import": "./.eslintrc.mjs",
-		"require": "./.eslintrc.cjs"
+		"import": "./eslint.config.mjs",
+		"require": "./eslint.config.cjs"
 	},
 	"peerDependencies": {
 		"eslint": ">=8.0.0",
 		"eslint-config-prettier": "^8.5.0"
 	},
 	"devDependencies": {
-		"@hyperupcall/prettier-config": "^0.5.0",
+		"@hyperupcall/prettier-config": "^0.6.0",
 		"eslint": "^8.18.0",
 		"eslint-config-prettier": "^8.5.0"
 	}
