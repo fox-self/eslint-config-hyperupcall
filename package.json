@@ -5,8 +5,8 @@
 		"lint": "eslint"
 	},
 	"exports": {
-		"import": "./eslint.config.mjs",
-		"require": "./eslint.config.cjs"
+		"import": "./.eslintrc.mjs",
+		"require": "./.eslintrc.cjs"
 	},
 	"peerDependencies": {
 		"eslint": ">=8.0.0",
