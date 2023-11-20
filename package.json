@@ -4,6 +4,7 @@
 	"scripts": {
 		"lint": "eslint"
 	},
+	"license": "MPL-2.0",
 	"exports": {
 		"import": "./.eslintrc.mjs",
 		"require": "./.eslintrc.cjs"
@@ -13,8 +14,19 @@
 		"eslint-config-prettier": ">=8.0.0"
 	},
 	"devDependencies": {
-		"@hyperupcall/prettier-config": "^0.6.0",
+		"@hyperupcall/prettier-config": "^0.7.0",
 		"eslint": "^8.18.0",
-		"eslint-config-prettier": "^8.5.0"
+		"eslint-config-prettier": "^8.5.0",
+		"prettier": "^3.1.0",
+		"prettier-plugin-pkg": "^0.18.0"
+	},
+	"description": "Edwin's ESLint configuration.",
+	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com)",
+	"bugs": {
+		"url": "https://github.com/fox-land/eslint-config-hyperupcall/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fox-land/eslint-config-hyperupcall.git"
 	}
 }

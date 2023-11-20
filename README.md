@@ -1,4 +1,4 @@
-# eslint-config
+# eslint-config-hyperupcall
 
 Edwin's [ESLint](https://eslint.org) configuration.
 
