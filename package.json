@@ -10,7 +10,7 @@
 	},
 	"peerDependencies": {
 		"eslint": ">=8.0.0",
-		"eslint-config-prettier": "^8.5.0"
+		"eslint-config-prettier": ">=8.0.0"
 	},
 	"devDependencies": {
 		"@hyperupcall/prettier-config": "^0.6.0",
