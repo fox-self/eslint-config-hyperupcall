@@ -2,7 +2,8 @@
 	"name": "@hyperupcall/eslint-config",
 	"version": "0.6.0",
 	"scripts": {
-		"lint": "eslint"
+		"lint": "eslint .",
+		"format": "prettier --check ."
 	},
 	"license": "MPL-2.0",
 	"exports": {
@@ -14,9 +15,11 @@
 		"eslint-config-prettier": ">=8.0.0"
 	},
 	"devDependencies": {
+		"@hyperupcall/markdownlint-config": "^0.3.2",
 		"@hyperupcall/prettier-config": "^0.7.0",
 		"eslint": "^8.18.0",
 		"eslint-config-prettier": "^8.5.0",
+		"markdownlint": "^0.32.1",
 		"prettier": "^3.1.0",
 		"prettier-plugin-pkg": "^0.18.0"
 	},
