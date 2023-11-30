@@ -11,14 +11,12 @@ module.exports = {
 	overrides: [
 		{
 			files: ['*.cjs'],
-			rules: {
-				env: {
-					commonjs: true,
-				},
-				parserOptions: {
-					sourceType: 'script',
-				},
+			env: {
+				commonjs: true,
 			},
+			parserOptions: {
+				sourceType: 'script',
+			}
 		},
 	],
 }
