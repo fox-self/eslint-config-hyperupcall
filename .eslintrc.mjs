@@ -8,7 +8,7 @@ export default {
 	],
 	env: {
 		'shared-node-browser': true,
-		es6: true,
+		es2022: true, // Supported by Node.js v18
 	},
 	parserOptions: {
 		sourceType: 'module',
