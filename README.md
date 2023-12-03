@@ -5,7 +5,7 @@ Edwin's [ESLint](https://eslint.org) configuration.
 ## Install
 
 ```sh
-pnpm i -D eslint eslint-config-prettier eslint-plugin-import @hyperupcall/eslint-config
+pnpm i -D eslint eslint-config-prettier eslint-plugin-import eslint-plugin-markdown @hyperupcall/eslint-config
 ```
 
 ## Usage

@@ -1,6 +1,11 @@
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-	extends: ['eslint:recommended', 'plugin:import/recommended', 'eslint-config-prettier'],
+	extends: [
+		'eslint:recommended',
+		'plugin:import/recommended',
+		'eslint-plugin-markdown',
+		'eslint-config-prettier',
+	],
 	env: {
 		'shared-node-browser': true,
 		es6: true,
@@ -16,7 +21,7 @@ module.exports = {
 			},
 			parserOptions: {
 				sourceType: 'script',
-			}
+			},
 		},
 	],
 }
