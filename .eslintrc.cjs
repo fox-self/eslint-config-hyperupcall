@@ -11,6 +11,7 @@ module.exports = {
 		es2022: true, // Supported by Node.js v18
 	},
 	parserOptions: {
+		ecmaVersion: 2022, // TODO: Should not need this
 		sourceType: 'module',
 	},
 	overrides: [
