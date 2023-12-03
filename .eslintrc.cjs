@@ -3,7 +3,7 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:import/recommended',
-		'eslint-plugin-markdown',
+		'plugin:markdown/recommended',
 		'eslint-config-prettier',
 	],
 	env: {
