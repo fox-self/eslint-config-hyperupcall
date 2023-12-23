@@ -1,9 +1,14 @@
 /** @type {import('eslint').ESLint.ConfigData} */
-export default {
+module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:import/recommended',
 		'plugin:markdown/recommended',
+		'plugin:promise/recommended',
+		'plugin:n/recommended',
+		'plugin:unicorn/recommended',
+		// 'plugin:security/recommended-legacy',
+		"plugin:@eslint-community/eslint-comments/recommended",
 		'eslint-config-prettier',
 	],
 	env: {
