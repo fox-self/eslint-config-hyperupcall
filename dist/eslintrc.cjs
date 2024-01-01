@@ -13,8 +13,12 @@ var src = {
         'plugin:n/recommended',
         'plugin:unicorn/recommended',
         // 'plugin:security/recommended-legacy',
-        "plugin:@eslint-community/eslint-comments/recommended",
-        'eslint-config-prettier'
+        'plugin:@eslint-community/eslint-comments/recommended',
+        'plugin:regexp/recommended',
+        'eslint-config-prettier',
+        'plugin:perfectionist/recommended-natural',
+        'plugin:no-unsanitized/DOM',
+        'plugin:mdx/recommended'
     ],
     env: {
         'shared-node-browser': true,
