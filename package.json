@@ -1,43 +1,63 @@
 {
 	"name": "@hyperupcall/eslint-config",
 	"version": "0.11.0",
-	"scripts": {
-		"build": "bunchee",
-		"lint": "eslint .",
-		"format": "prettier --check ."
+	"description": "Edwin's ESLint configuration.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fox-land/eslint-config-hyperupcall.git"
 	},
-	"files": [
-		"./dist/eslintrc.cjs",
-		"./dist/eslintrc.mjs"
-	],
+	"bugs": {
+		"url": "https://github.com/fox-land/eslint-config-hyperupcall/issues"
+	},
+	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com)",
 	"license": "MPL-2.0",
 	"exports": {
 		"import": "./dist/eslintrc.mjs",
 		"require": "./dist/eslintrc.cjs"
 	},
+	"files": [
+		"./dist/eslintrc.cjs",
+		"./dist/eslintrc.mjs"
+	],
+	"scripts": {
+		"build": "bunchee",
+		"format": "prettier --check .",
+		"lint": "eslint ."
+	},
 	"peerDependencies": {
-		"eslint": ">=8.0.0",
-		"eslint-config-prettier": ">=8.0.0"
+		"eslint": "^8.0.0",
+		"eslint-config-prettier": ">=9.0.0",
+		"eslint-plugin-import": ">=2.0.0",
+		"eslint-plugin-markdown": ">=3.0.0",
+		"eslint-plugin-mdx": ">=2.0.0",
+		"eslint-plugin-n": ">=16.0.0",
+		"eslint-plugin-no-unsanitized": ">=4.0.0",
+		"eslint-plugin-perfectionist": ">=2.0.0",
+		"eslint-plugin-promise": ">=6.0.0",
+		"eslint-plugin-regexp": ">=2.0.0",
+		"eslint-plugin-security": ">=2.0.0",
+		"eslint-plugin-unicorn": ">=50.0.0"
 	},
 	"devDependencies": {
+		"@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
+		"@hyperupcall/eslint-config": "^0.11.0",
 		"@hyperupcall/markdownlint-config": "^0.3.2",
 		"@hyperupcall/prettier-config": "^0.7.0",
 		"bunchee": "^4.1.1",
-		"eslint": "^8.18.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-import": "^2.29.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
 		"eslint-plugin-markdown": "^3.0.1",
+		"eslint-plugin-mdx": "^2.3.2",
+		"eslint-plugin-n": "^16.6.1",
+		"eslint-plugin-no-unsanitized": "^4.0.2",
+		"eslint-plugin-perfectionist": "^2.5.0",
+		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-regexp": "^2.1.2",
+		"eslint-plugin-security": "^2.1.0",
+		"eslint-plugin-unicorn": "^50.0.1",
 		"markdownlint": "^0.32.1",
 		"prettier": "^3.1.1",
 		"prettier-plugin-pkg": "^0.18.0"
-	},
-	"description": "Edwin's ESLint configuration.",
-	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com)",
-	"bugs": {
-		"url": "https://github.com/fox-land/eslint-config-hyperupcall/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/fox-land/eslint-config-hyperupcall.git"
 	}
 }
