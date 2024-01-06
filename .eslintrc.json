@@ -7,6 +7,10 @@
 		"plugin:n/recommended",
 		"plugin:unicorn/recommended",
 		"plugin:@eslint-community/eslint-comments/recommended",
+		"plugin:regexp/recommended",
+		"plugin:perfectionist/recommended-natural",
+		"plugin:no-unsanitized/DOM",
+		"plugin:mdx/recommended",
 		"eslint-config-prettier"
 	],
 	"env": {
