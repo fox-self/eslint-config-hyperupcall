@@ -1,5 +1,6 @@
 import globals from 'globals'
 import langJs from "@eslint/js";
+// @ts-expect-error
 import langMarkdown from "@eslint/markdown";
 import langMdx from 'eslint-plugin-mdx'
 import pluginPromise from 'eslint-plugin-promise'
@@ -45,7 +46,7 @@ const config = [
 	...langMarkdown.configs.recommended,
 	{
 	...langMdx.flat,
-		processor: mdx.createRemarkProcessor({
+		processor: langMdx.createRemarkProcessor({
 			lintCodeBlocks: true,
 		}),
 	},

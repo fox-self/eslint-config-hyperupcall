@@ -1,6 +1,6 @@
 {
 	"name": "@hyperupcall/eslint-config",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Edwin's ESLint configuration.",
 	"type": "module",
 	"repository": {
@@ -12,12 +12,17 @@
 	},
 	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com)",
 	"license": "MPL-2.0",
-	"main": "./eslint.config.js",
+	"exports": {
+		".": {
+			"import": "./output/index.mjs",
+			"require": "./output/index.cjs"
+		}
+	},
 	"files": [
-		"./eslint.config.js"
+		"output"
 	],
 	"scripts": {
-		"build": "bunchee",
+		"build": "rm -rf ./output && rollup --config ./rollup.config.js && tsc --project ./tsconfig.json",
 		"format": "prettier --check .",
 		"lint": "eslint ."
 	},
@@ -43,7 +48,7 @@
 		"@hyperupcall/eslint-config": "^0.11.0",
 		"@hyperupcall/markdownlint-config": "^0.3.2",
 		"@hyperupcall/prettier-config": "^0.8.0",
-		"bunchee": "^5.3.2",
+		"@rollup/plugin-node-resolve": "^15.3.0",
 		"eslint": "^9.9.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-import": "^2.29.1",
@@ -58,9 +63,16 @@
 		"eslint-plugin-unicorn": "^55.0.0",
 		"markdownlint": "^0.34.0",
 		"prettier": "^3.3.3",
-		"prettier-plugin-pkg": "^0.18.1"
+		"prettier-plugin-pkg": "^0.18.1",
+		"rollup": "^4.24.4",
+		"typescript": "^5.6.3"
 	},
 	"dependencies": {
 		"globals": "^15.9.0"
-	}
+	},
+	"markdownlint-cli2": {
+		"extends": "./node_modules/@hyperupcall/markdownlint-config/.markdownlint.json"
+	},
+	"private": false,
+	"prettier": "@hyperupcall/scripts-nodejs/config-prettier.js"
 }
