@@ -6,8 +6,8 @@ Edwin's [ESLint](https://eslint.org) configuration.
 
 ```sh
 pnpm i -D \
-	eslint eslint-config-prettier @hyperupcall/eslint-config \
-	eslint-plugin-import eslint-plugin-markdown eslint-plugin-promise \
+	eslint @eslint/markdown @eslint/css @eslint/json eslint-config-prettier @hyperupcall/eslint-config \
+	eslint-plugin-import eslint-plugin-promise \
 	eslint-plugin-n eslint-plugin-unicorn eslint-plugin-security \
 	@eslint-community/eslint-plugin-eslint-comments eslint-plugin-regexp \
 	eslint-plugin-perfectionist eslint-plugin-no-unsanitized eslint-plugin-mdx
