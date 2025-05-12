@@ -1,20 +1,20 @@
 import globals from 'globals'
 import { defineConfig } from 'eslint/config'
-import langJs from "@eslint/js";
+import langJs from '@eslint/js'
 // @ts-expect-error
-import langMarkdown from "@eslint/markdown";
-import langCss from "@eslint/css";
-import langJson from '@eslint/json';
+import langMarkdown from '@eslint/markdown'
+import langCss from '@eslint/css'
+import langJson from '@eslint/json'
 // import langMdx from 'eslint-plugin-mdx' // TODO
 import pluginPromise from 'eslint-plugin-promise'
-import pluginNode from "eslint-plugin-n"
+import pluginNode from 'eslint-plugin-n'
 import pluginSecurity from 'eslint-plugin-security'
-import pluginComments from "@eslint-community/eslint-plugin-eslint-comments/configs"
-import pluginUnicorn from 'eslint-plugin-unicorn';
-import pluginRegexp from "eslint-plugin-regexp"
-import pluginNoUnsanitized from "eslint-plugin-no-unsanitized";
+import pluginComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import pluginUnicorn from 'eslint-plugin-unicorn'
+import pluginRegexp from 'eslint-plugin-regexp'
+import pluginNoUnsanitized from 'eslint-plugin-no-unsanitized'
 import pluginPerfectionist from 'eslint-plugin-perfectionist'
-import configPrettier from "eslint-config-prettier";
+import configPrettier from 'eslint-config-prettier'
 
 /**
  * @import { RuleEntry } from '@eslint/config-helpers'
@@ -22,7 +22,6 @@ import configPrettier from "eslint-config-prettier";
 // TODO: import-x
 
 const CurrentMode = process.env.HYPERUPCALL_LINT_MODE || 'release'
-
 
 export default defineConfig([
 	// https://github.com/eslint/eslint/tree/main/packages/js
@@ -37,22 +36,22 @@ export default defineConfig([
 			'constructor-super': modeSwitch({
 				edit: ['warn'],
 				commit: ['error'],
-				release: ['error']
+				release: ['error'],
 			}),
 			'for-direction': ['error'],
 			'getter-return': modeSwitch({
 				edit: ['off'],
 				commit: ['error'],
 				release: ['error'],
-			})
-		}
+			}),
+		},
 	},
 
 	// https://github.com/eslint-community/eslint-plugin-promise
 	pluginPromise.configs['flat/recommended'],
 
 	// https://github.com/eslint-community/eslint-plugin-n
-	pluginNode.configs["flat/recommended-script"],
+	pluginNode.configs['flat/recommended-script'],
 
 	// https://github.com/eslint-community/eslint-plugin-security
 	pluginSecurity.configs.recommended,
@@ -64,7 +63,7 @@ export default defineConfig([
 	pluginUnicorn.configs['flat/recommended'],
 
 	// https://www.npmjs.com/package/eslint-plugin-regexp
-	pluginRegexp.configs["flat/recommended"],
+	pluginRegexp.configs['flat/recommended'],
 
 	// https://github.com/mozilla/eslint-plugin-no-unsanitized
 	pluginNoUnsanitized.configs.recommended,
@@ -78,12 +77,12 @@ export default defineConfig([
 	// https://github.com/eslint/markdown
 	...langMarkdown.configs.recommended,
 	{
-		files: ["**/*.md"],
+		files: ['**/*.md'],
 		plugins: {
-			langMarkdown
+			langMarkdown,
 		},
-		language: "markdown/commonmark",
-		rules: {}
+		language: 'markdown/commonmark',
+		rules: {},
 	},
 
 	// https://github.com/mdx-js/eslint-mdx/tree/master/packages/eslint-plugin-mdx
@@ -95,8 +94,8 @@ export default defineConfig([
 
 	// https://github.com/eslint/css
 	{
-		files: ["**/*.css"],
-		language: "css/css",
+		files: ['**/*.css'],
+		language: 'css/css',
 		...langCss.configs.recommended,
 	},
 
@@ -107,25 +106,24 @@ export default defineConfig([
 		},
 	},
 	{
-		files: ["**/*.json"],
-		ignores: ["package-lock.json"],
-		language: "json/json",
+		files: ['**/*.json'],
+		ignores: ['package-lock.json'],
+		language: 'json/json',
 		...langJson.configs.recommended,
 	},
 
 	{
-		files: ["**/*.jsonc"],
-		language: "json/jsonc",
+		files: ['**/*.jsonc'],
+		language: 'json/jsonc',
 		...langJson.configs.recommended,
 	},
 
 	{
-		files: ["**/*.json5"],
-		language: "json/json5",
+		files: ['**/*.json5'],
+		language: 'json/json5',
 		...langJson.configs.recommended,
 	},
 ])
-
 
 /**
  * @param {Record<'edit' | 'commit' | 'release', unknown | undefined>} toggles
@@ -135,9 +133,10 @@ function modeSwitch(toggles) {
 	const possibleModes = ['edit', 'commit', 'release']
 	const currentMode = 'edit'
 	if (!possibleModes.includes(CurrentMode)) {
-		throw new Error(`Expected the current mode to be ${new Intl.ListFormat().format(possibleModes).map((/** @type {string} */ item) => `"${item}"`)}. Found "${CurrentMode}"`)
+		throw new Error(
+			`Expected the current mode to be ${new Intl.ListFormat().format(possibleModes).map((/** @type {string} */ item) => `"${item}"`)}. Found "${CurrentMode}"`,
+		)
 	}
-
 
 	// if (currentMode === 'edit' && toggles.edit)
 
