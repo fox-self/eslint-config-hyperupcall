@@ -15,10 +15,8 @@ pnpm i -D \
 
 ## Usage
 
-In `.eslintrc.json`:
+In `eslint.config.js`:
 
-```json
-{
-	"extends": ["@hyperupcall/eslint-config"]
-}
+```js
+export { default } from '@hyperupcall/eslint-config'
 ```
