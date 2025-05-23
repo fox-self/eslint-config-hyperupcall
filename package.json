@@ -20,7 +20,7 @@
 		}
 	},
 	"files": [
-		"output"
+		"output/*"
 	],
 	"scripts": {
 		"build": "rm -rf ./output && rollup --config ./rollup.config.js && tsc --project ./tsconfig.json",
